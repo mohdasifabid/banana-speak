@@ -1,25 +1,24 @@
-//console.log("Hey dude my name is asif")
+var url = "https://api.funtranslations.com/translate/dolan.json"
 
-//alert("This works man")
 
-//var username = prompt("Give me username")
-//console.log(username)
-//alert ("this script works bro " + username)
-
-console.log(document)
-var heading = document.querySelector(".heading")
+var input = document.querySelector("#textInput")
 console.log(heading.textContent)
-// heading.textContent = username
+
 var output = document.querySelector("#textOutput")
 console.log(output.textContent)
 
 var btnTranslate = document.querySelector("#btnTranslate");
 
-  var textInput = document.querySelector("#textInput");
 
     btnTranslate.addEventListener("click", function () {
-      var input = textInput.value
-      output.textContent = input
+           
+           var userInput = input.value;
+           fetch(url + "?text=" + userInput).then(function (response){
+               return response.json()
+           }).then(function (data){
+               console.log(data);
+               output.textContent = data.contents.translated;
+           })
 
 })
 

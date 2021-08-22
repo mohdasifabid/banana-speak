@@ -1,45 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dolan Trnaslation</title>
 
     <style>
-        textarea {
-            width: 80%;
-            height: 10vh;
-            display: block;
-            margin: 1rem;
-            padding: 2rem;
-        }
-        #textOutput {
-            border: 1px solid orange;
-            height: 10vh;
-            width: 80%;
-            margin: 1rem;
-            padding: 2rem;
-        }
+      textarea {
+        width: 80%;
+        height: 10vh;
+        display: block;
+        margin-left: 8%;
+        padding: 2rem;
+        background-color: black;
+        border-radius: 10px;
+        border: 2px solid white;
+        color: white;
+      }
+      #textOutput {
+        border: 2px solid orange;
+        height: 10vh;
+        width: 80%;
+        margin-left: 8%;
+        padding: 2rem;
+        border-radius: 10px;
+        color: white;
+      }
+      #heading {
+        text-align: center;
+        color: white;
+      }
+
+      #btnTranslate {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        width: 150px;
+        height: 35px;
+        margin-left: 45%;
+        background-color: black;
+        border: 1px solid white;
+        color: white;
+      }
+
+      #output {
+        text-align: center;
+        font-size: large;
+        margin-bottom: 20px;
+        color: white;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-   
-    <h1 class="heading">Talk Banana</h1>
-
-      
+  <body style="background-color: black">
+    <h1 id="heading">Dolan Translation App</h1>
 
     <textarea id="textInput"></textarea>
 
-          
+    <button id="btnTranslate">Translate</button>
 
-          <button id="btnTranslate">Translate</button>
+    <div id="output">The output will be displayed right here</div>
+    <div id="textOutput"></div>
 
-    <div id="output">You can see the output, below</div>
-       <div id="textOutput"></div>
-
-       <script src="app.js" type="text/javascript"></script>
-</body>
+    <script src="app.js" type="text/javascript"></script>
+  </body>
 </html>
